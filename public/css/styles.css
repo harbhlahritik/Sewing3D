@@ -11,11 +11,17 @@ body {
 /* navbar */
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 8vh;
   background-color: #1C1C1C;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .nav-links li a {
@@ -44,22 +50,41 @@ nav	a {
 
 /* landing page */
 
-.landing-text1 {
-  position: absolute;
+.landing {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.landing-text {
+  flex-basis: 0;
+  flex-grow: 1;
+  position: relative;
+  left: 80px;
   color: #9F9F9F;
-  font-size: 100px;
-  top: 80px;
-  left: 70px;
+}
+
+.landing .landing-text .landing-text1 {
+  font-size: 80px;
+  position: relative;
+  top: 100px;
   animation: fade-in ease 2s;
 }
 
-.landing-text2 {
-  position: absolute;
-  color: #9F9F9F;
-  font-size: 200px;
-  top: 170px;
-  left: 70px;
+.landing .landing-text .landing-text2 {
+  font-size: 160px;
   animation: fade-in ease 5s;
+}
+
+.landing-img {
+  background: url(../img/Unsplash/header_new.jpg) no-repeat bottom center;
+  background-color: #000000;
+  background-size: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+  height: 100vh;
 }
 
 @keyframes fade-in {
@@ -71,22 +96,16 @@ nav	a {
   }
 }
 
-.landing {
-  background: url(../img/Unsplash/header_new.jpg) right bottom no-repeat, #000000 left top repeat;
-  height: 92vh;
-  background-size: 500px, auto;
-}
-
 /* dot effect */
 
-.loadingContainer {
+.landing .landing-text .loadingContainer {
   position: relative;
-  padding-top: 60px;
+  top: -113px;
+  left: 300px;
   width: 100px;
-  top: 375px;
-  left: 450px;
   animation: fade-in ease 5s;
 }
+
 .loadingContainer div {
   height:20px;
   width:20px;
@@ -96,7 +115,7 @@ nav	a {
   margin:0 5px;
 }
 .loadingContainer .ball1 {
-  z-index:1;
+  /* z-index:1; */
   animation: bounce 2s infinite ease-in-out;
   -moz-animation: bounce 2s infinite ease-in-out;
   -webkit-animation: bounce 2s infinite ease-in-out;
@@ -156,19 +175,16 @@ nav	a {
 
   .line {
     background-color: #FFFFFF;
-    width: 30px;
-    height: 3px;
+    width: 25px;
+    height: 2px;
     margin: 5px;
-  }
-
-  nav {
-    position: relative;
-    display: block;
   }
 
   .nav-links {
     position: fixed;
     background: #1C1C1C;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -217,28 +233,40 @@ nav	a {
   /* landing page */
 
   .landing {
-    background: url(../img/Unsplash/header_new.jpg) bottom no-repeat, #000000 top repeat;
-    height: 92vh;
-    background-size: 100%;
+    flex-direction: column;
+    height: 100vh;
   }
 
-  .loadingContainer {
-    position: absolute;
-    left: 250px;
-    top: -128px;
+  .landing-text {
+    left: -10px;
   }
 
-  .landing-text1 {
-    position: absolute;
-    font-size: 40px;
-    left: 10%;
-    top: 10%;
+  .landing-img {
+    width: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
   }
 
-  .landing-text2 {
-    position: absolute;
+  .landing .landing-text .landing-text1 {
+    font-size: 50px;
+    left: 0px;
+  }
+
+  .landing .landing-text .landing-text2 {
     font-size: 100px;
-    left: 10%;
-    top: 10px;
+    position: relative;
+    top: 30px;
+    left: 0px;
   }
+
+  /* dot effect */
+
+  .landing .landing-text .loadingContainer {
+    position: relative;
+    top: -50px;
+    left: 200px;
+    width: 100px;
+    animation: fade-in ease 5s;
+  }
+
 }
