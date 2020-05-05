@@ -87,6 +87,13 @@ nav	a {
   height: 100vh;
 }
 
+.landing-img > div {
+  position: relative;
+  top: 50%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)) no-repeat bottom;
+  height: 50vh;
+}
+ 
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -115,7 +122,6 @@ nav	a {
   margin:0 5px;
 }
 .loadingContainer .ball1 {
-  /* z-index:1; */
   animation: bounce 2s infinite ease-in-out;
   -moz-animation: bounce 2s infinite ease-in-out;
   -webkit-animation: bounce 2s infinite ease-in-out;
@@ -150,8 +156,176 @@ nav	a {
   80%, 100% {-webkit-transform: translate(0,0);};
 }
 
+/* About page section */
+
+.about {
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  flex-direction: row-reverse;
+  flex: 1 1 0px;
+}
+
+.about-img {
+  flex: 1;
+  background-color: #000000;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0,1)),
+  url(../img/Unsplash/about.jpg) no-repeat bottom center;
+  background-size: auto 100%;
+  height: 100vh;
+  width: 100%;
+  order: 1;
+}
+
+.about-img > div {
+  position: relative;
+  top: 50%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)) no-repeat bottom;
+  height: 50vh;
+}
+
+.about-text {
+  flex: 1;
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.about-text > div {
+  margin: 0 20%;
+}
+
+.bar {
+  background-color: #1C1C1C;
+  width: 100px;
+  height: 5px;
+}
+
+.about-text > div > h1 {
+  font-size: 50px;
+}
+
+.about-text > div > p {
+  font-size: 1.2rem;
+  color: #9F9F9F;
+}
+
+/* Portfolio Slider */
+
+.products {
+  background-color: #000000;
+  color: #FFFFFF;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.products-text {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.products-text > h1 {
+  font-size: 50px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+  opacity: 1;
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #1C1C1C;
+  padding: 35px;
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+/* .buttons {
+  position: relative;
+} */
+
+.buttons button#next {
+  position: absolute;
+  top: 60%;
+  right: 15px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 60%;
+  left: 15px;
+}
+
+.buttons button {
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons button:hover {
+  background-color: #FFFFFF;
+  color: #1C1C1C;
+}
+
+/* product images slides */
+
+.slide:nth-child(1) {
+  background: url(../img/personal/helicopter.jpeg) no-repeat center center/cover;
+}
+
+.slide:nth-child(2) {
+  background: url(../img/personal/laptop_stand_1.jpeg) no-repeat center center/cover;
+}
+
+.slide:nth-child(3) {
+  background: url(../img/personal/headphone_stand.jpeg) no-repeat center center/cover;
+}
+
+
 
 @media screen and (max-width: 768px) {
+
+  body {
+    font-size: 1.3rem;
+  }
+  
 
   /* navbar */
 
@@ -192,7 +366,7 @@ nav	a {
     justify-content: space-evenly;
     clip-path: circle(100px at 10% -10%);
     -webkit-clip-path: circle(100px at 10% -10%);
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
     pointer-events: none;
   }
 
@@ -200,24 +374,28 @@ nav	a {
     opacity: 0;
   }
 
+  .nav-links li a {
+    font-size: 1.3rem;
+  }
+
   .nav-links li:nth-child(1){
-    transition: all 0.5s ease 0.2s;
+    transition: all 0.5s ease 0.1s;
   }
 
   .nav-links li:nth-child(2){
-    transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.2s;
   }
 
   .nav-links li:nth-child(3){
-    transition: all 0.5s ease 0.6s;
+    transition: all 0.5s ease 0.3s;
   }
 
   .nav-links li:nth-child(4){
-    transition: all 0.5s ease 0.8s;
+    transition: all 0.5s ease 0.4s;
   }
 
   .nav-links li:nth-child(5){
-    transition: all 0.5s ease 1s;
+    transition: all 0.5s ease 0.5s;
   }
 
   .nav-links li.fade {
@@ -267,6 +445,18 @@ nav	a {
     left: 200px;
     width: 100px;
     animation: fade-in ease 5s;
+  }
+
+  /* carousel */
+
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
   }
 
 }
