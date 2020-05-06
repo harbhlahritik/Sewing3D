@@ -24,11 +24,6 @@ nav {
   z-index: 1;
 }
 
-.nav-links li a {
-  font-weight: 100;
-  font-size: 14px;
-}
-
 .flex-nav {
   flex: 0 0 600px;
 }
@@ -37,6 +32,23 @@ nav {
   display: flex;
   justify-content: space-around;
   list-style: none;
+}
+
+.nav-links li a {
+  display: inline-block;
+  padding: 16px;
+  font-weight: 200;
+  font-size: 14px;
+  margin: auto;
+}
+
+
+.nav-links li:hover {
+  background-color: #9F9F9F;
+}
+
+.nav-links li:hover ~ a {
+  color: #000000;
 }
 
 nav	a {
@@ -266,8 +278,8 @@ nav	a {
   left: -600px;
   opacity: 0;
   width: 600px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #1C1C1C;
+  background-color: rgba(28, 28, 28, 0.5);
+  color: #FFFFFF;
   padding: 35px;
 }
 
@@ -311,15 +323,15 @@ nav	a {
 /* product images slides */
 
 .slide:nth-child(1) {
-  background: url(../img/personal/helicopter.jpeg) no-repeat center center/cover;
+  background: url(../img/laptop_stand_2.jpg) no-repeat center center/cover;
 }
 
 .slide:nth-child(2) {
-  background: url(../img/personal/laptop_stand_1.jpeg) no-repeat center center/cover;
+  background: url(../img/laptop_stand_1.jpg) no-repeat center center/cover;
 }
 
 .slide:nth-child(3) {
-  background: url(../img/personal/headphone_stand.jpeg) no-repeat center center/cover;
+  background: url(../img/personal/helicopter.jpeg) no-repeat center center/cover;
 }
 
 /* make-space */
@@ -387,7 +399,7 @@ nav	a {
 
 .contact-middle-text > p {
   color:#9F9F9F;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 
@@ -416,19 +428,19 @@ nav	a {
   max-width: 425px;
 }
 
-.quotation-form .form-items {
+.form-items {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .form-input {
   width: 100%;
   max-width: 425px;
   padding: 15px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 
   outline: none;
   border: none;
@@ -471,6 +483,10 @@ textarea {
   min-height: 200px;
 }
 
+textarea::placeholder {
+  font-size: 1.2rem;
+}
+
 .form-upload::-webkit-file-upload-button {
   visibility: hidden;
   -webkit-appearance: none;
@@ -484,7 +500,7 @@ textarea {
   border-radius: 10px;
   color: #9F9F9F;
   padding: 15px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   background: #1C1C1C;
   transition: all 0.5s;
 }
@@ -492,7 +508,7 @@ textarea {
 .form-error {
   padding: 5px;
   color: #d50000;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   visibility: hidden;
 }
 
@@ -502,7 +518,7 @@ textarea {
 
 .submit-button {
   padding: 15px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   width: 100%;
   border: none;
   border-radius: 10px;
@@ -660,6 +676,10 @@ textarea {
 
   /* carousel */
 
+  .carousel {
+    height: 65vh;
+  }
+
   .slide .content {
     bottom: -300px;
     left: 0;
@@ -670,4 +690,51 @@ textarea {
     transform: translateY(-300px);
   }
 
+
+  /* about section */
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-text {
+    margin: 50px 0;
+  }
+
+  /* products */
+
+  .products-text {
+    margin: 50px 0;
+  }
+
+  /* product images slides */
+
+  .slide:nth-child(1) {
+    background: url(../img/laptop_stand_2_mobile.jpg) no-repeat center center/cover;
+  }
+
+  .slide:nth-child(2) {
+    background: url(../img/laptop_stand_1_mobile.jpg) no-repeat center center/cover;
+  }
+
+  .slide:nth-child(3) {
+    background: url(../img/personal/helicopter.jpeg) no-repeat center center/cover;
+  }
+
+
+  /* contact us */
+
+  /* get quotation */
+
+  .form-items {
+    margin: 0 5%;
+    width: 90%;
+  }
+
+  /* copyright */
+
+  .copyright-text {
+    font-size: 0.8rem;
+  }
+  
 }

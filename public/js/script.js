@@ -9,6 +9,25 @@ hamburger.addEventListener('click', () => {
     });
 });
 
+document.querySelectorAll('.nav-links li a').forEach(item => {
+    item.addEventListener('click', event => {
+        navLinks.classList.toggle('open');
+        links.forEach(link => {
+            link.classList.toggle('fade');
+        });
+    });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');

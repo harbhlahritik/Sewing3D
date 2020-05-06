@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sewing3D</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins:100,400|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins:200,400|Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/49ce7ab8c6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
-    <header>
+    <header id="top">
         <nav>
             <div class='hamburger'>
                 <div class="line"></div>
@@ -22,11 +22,11 @@
             </div>
             <div class='flex-nav'>
                 <ul class='nav-links'>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Get Quotation</a></li>
+                    <li><a class="nav_a" href="#top">Home</a></li>
+                    <li><a class="nav_a" href="#about" >About</a></li>
+                    <li><a class="nav_a" href="#product">Portfolio</a></li>
+                    <li><a class="nav_a" href="#contact">Contact Us</a></li>
+                    <li><a class="nav_a" href="#quotation">Get Quotation</a></li>
                 </ul>
             </div>
         </nav>
@@ -46,7 +46,7 @@
         <div class="landing-img"><div></div></div>
     </section>
 
-    <main class='about'>
+    <main class='about' id="about">
         <div class="about-img">
             <div class="gradient-top"></div>
             <div class="gradient-bottom"></div>
@@ -61,7 +61,7 @@
         </div>
     </main>
 
-    <section class="products">
+    <section class="products" id="product">
         <div class="products-text">
             <h1>Our Products</h1>
             <div class="bar"></div>
@@ -69,20 +69,20 @@
         <div class="carousel">
             <div class="slide current">
                 <div class="content">
-                    <h1>Slide One</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quaerat non unde totam voluptatum beatae?</p>
+                    <h1>Laptop Stand</h1>
+                    <p>Adjustable Laptop Stand</p>
                 </div>
             </div>
             <div class="slide">
                 <div class="content">
-                    <h1>Slide Two</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quaerat non unde totam voluptatum beatae?</p>
+                    <h1>Laptop Stand 2.0</h1>
+                    <p>Ajustable laptop stand</p>
                 </div>
             </div>
             <div class="slide">
                 <div class="content">
-                    <h1>Slide Three</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat quaerat non unde totam voluptatum beatae?</p>
+                    <h1>Helicopter Model</h1>
+                    <p>Realistic 3D showpiece Model</p>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
 
     <div class="make-space"></div>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact-left-img">
             <div class="gradient-top"></div>
             <div class="right-gradient"></div>
@@ -120,7 +120,7 @@
         </div>
     </section>
 
-    <section class="quotation">
+    <section class="quotation" id="quotation">
         <div class="quotation-text">
             <h1>Get Quotation</h1>
             <div class="bar"></div>
@@ -134,7 +134,7 @@
                 <input type="email" id="email" name="email" class="form-input" placeholder="Email ID">
                 <span class="form-error"></span><br>
                 <label for="contact">Contact</label>
-                <input type="text" id="contact" name="contact" class="form-input" placeholder="Contact Number with International code">
+                <input type="text" id="contact" name="contact" class="form-input" placeholder="Contact Number">
                 <span class="form-error"></span><br>
                 <label for="upload">Upload STL</label>
                 <input type="file" id="upload" name="upload" class="form-upload" accept=".stl">
