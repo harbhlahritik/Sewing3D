@@ -273,10 +273,6 @@ nav	a {
   transition: all 0.7s ease-in-out 0.3s;
 }
 
-/* .buttons {
-  position: relative;
-} */
-
 .buttons button#next {
   position: absolute;
   top: 60%;
@@ -317,6 +313,103 @@ nav	a {
 .slide:nth-child(3) {
   background: url(../img/personal/headphone_stand.jpeg) no-repeat center center/cover;
 }
+
+/* make-space */
+
+.make-space {
+  background-color: #000000;
+  padding: 5%;
+  width: 100%;
+}
+
+/* Contact Us Page */
+
+.contact {
+  background-color: #000000;
+  color: #FFFFFF;
+  display: flex;
+}
+
+.contact-left-img {
+  flex: 1;
+  background: url(../img/Unsplash/contact_left.jpg) no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact-left-img > div {
+  position: relative;
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1)) no-repeat left;
+  height: 100vh;
+}
+
+.contact-right-img {
+  flex: 1;
+  background: url(../img/Unsplash/contact_right.jpg) no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact-right-img > div {
+  position: relative;
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1)) no-repeat right;
+  height: 100vh;
+}
+
+.contact-middle-text {
+  flex: 1;
+  margin: auto 0;
+  padding: 0 5%;
+}
+
+.contact-middle-text .contact-text > h1 {
+  font-size: 50px;
+}
+
+.contact-middle-text > p {
+  color:#9F9F9F;
+  font-size: 1.3rem;
+}
+
+
+/* Quotation Section */
+
+.quotation {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.quotation-text {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.quotation-text > h1 {
+  font-size: 50px;
+}
+
+.quotation-form input, textarea {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
