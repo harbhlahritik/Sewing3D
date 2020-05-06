@@ -48,7 +48,8 @@
 
     <main class='about'>
         <div class="about-img">
-            <div></div>
+            <div class="gradient-top"></div>
+            <div class="gradient-bottom"></div>
         </div>
         <div class="about-text">
             <div>
@@ -94,17 +95,29 @@
     <div class="make-space"></div>
 
     <section class="contact">
-        <div class="contact-left-img"><div class="right-gradient"></div></div>
+        <div class="contact-left-img">
+            <div class="gradient-top"></div>
+            <div class="right-gradient"></div>
+            <div class="gradient-bottom1"></div>
+        </div>
         <div class="contact-middle-text">
             <div class="contact-text">
                 <h1>Contact Us</h1>
                 <div class="bar"></div>
             </div>
+            <br>
             <p>Address: Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, quasi!</p>
+            <br>
             <p>Email: contact@sewing3D.com</p>
+            <br>
             <p>Phone: (+91) 1234-123-123</p>
+            <br>
         </div>
-        <div class="contact-right-img"><div class="left-gradient"></div></div>
+        <div class="contact-right-img">
+            <div class="gradient-top"></div>
+            <div class="left-gradient"></div>
+            <div class="gradient-bottom1"></div>
+        </div>
     </section>
 
     <section class="quotation">
@@ -113,20 +126,28 @@
             <div class="bar"></div>
         </div>
         <div class="quotation-form">
-            <form action="#">
+            <form action="#" class="form-items">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="text" id="name" name="name" class="form-input" placeholder="Name">
+                <span class="form-error"></span><br>
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email ID">
+                <input type="email" id="email" name="email" class="form-input" placeholder="Email ID">
+                <span class="form-error"></span><br>
                 <label for="contact">Contact</label>
-                <input type="number" id="contact" name="contact" placeholder="Contact Number with International code">
+                <input type="text" id="contact" name="contact" class="form-input" placeholder="Contact Number with International code">
+                <span class="form-error"></span><br>
                 <label for="upload">Upload STL</label>
-                <input type="file" id="upload" name="upload" accept=".stl">
+                <input type="file" id="upload" name="upload" class="form-upload" accept=".stl">
+                <span class="form-error"></span><br>
                 <label for="comments">Comments</label>
-                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter Your Queries or Comments here"></textarea>
+                <textarea name="comments" id="comments" cols="70" rows="10" class="form-input" placeholder="Enter Your Queries or Comments here"></textarea>
+                <span class="form-error"></span><br><br>
+                <button class="submit-button" type="submit">Submit</button>
             </form>
         </div>
     </section>
+
+    <div class="make-space"></div>
     
     <footer class="copyright">
         <div class="copyright-text">
