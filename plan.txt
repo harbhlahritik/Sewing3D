@@ -7,7 +7,7 @@ Email Stl handling using axios
 Workflow -
 Navbar
 Img with parallax text on it collapsing text
-Items available carasol along with link to the amazon page
+Items available carousal along with link to the amazon page
 Get custom prints quotation below
 Contact us along with stl upload facility
 footer with copyright info

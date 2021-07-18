@@ -12,7 +12,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-// var quotationRef = firebase.database().ref('quotations');
+var quotationRef = firebase.database().ref('quotations');
 
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
@@ -106,46 +106,46 @@ if (auto) {
     slideInterval = setInterval(nextSlide, intervalTime);
 }
 
-// // handling contact form
-// document.getElementById('quotation-form').addEventListener('submit', submitForm);
+// handling contact form
+document.getElementById('quotation-form').addEventListener('submit', submitForm);
 
-// // Submit form
-// function submitForm(e) {
-//     e.preventDefault();
+// Submit form
+function submitForm(e) {
+    e.preventDefault();
 
-//     // Get Values
-//     var name = getInputVal('name');
-//     var email = getInputVal('email');
-//     var phone = getInputVal('phone');
-//     var upload = getInputVal('upload');
-//     var comments = getInputVal('comments');
+    // Get Values
+    var name = getInputVal('name');
+    var email = getInputVal('email');
+    var phone = getInputVal('phone');
+    var upload = getInputVal('upload');
+    var comments = getInputVal('comments');
 
-//     console.log("name: "+name);
-//     console.log("email: "+email);
-//     console.log("phone: "+phone);
-//     console.log("upload: "+upload);
-//     console.log("comments: "+comments);
+    console.log("name: "+name);
+    console.log("email: "+email);
+    console.log("phone: "+phone);
+    console.log("upload: "+upload);
+    console.log("comments: "+comments);
 
-//     console.log(getInputVal('phone'));
+    console.log(getInputVal('phone'));
 
 
-//     saveQuotation(name, email, phone, upload, comments);
-// }
+    saveQuotation(name, email, phone, upload, comments);
+}
 
-// // Function to get form values
-// function getInputVal(id) {
-//     return document.getElementById(id).value;
-// }
+// Function to get form values
+function getInputVal(id) {
+    return document.getElementById(id).value;
+}
 
-// // save Quotation
-// function saveQuotation(name, email, phone, upload, comments){
-//     var newQuotationRef = quotationRef.push();
-//     console.log(newQuotationRef);
-//     newQuotationRef.set({
-//         name: name,
-//         email: email,
-//         phone: phone,
-//         upload: upload,
-//         comments: comments
-//     });
-// }
+// save Quotation
+function saveQuotation(name, email, phone, upload, comments){
+    var newQuotationRef = quotationRef.push();
+    console.log(newQuotationRef);
+    newQuotationRef.set({
+        name: name,
+        email: email,
+        phone: phone,
+        upload: upload,
+        comments: comments
+    });
+}
