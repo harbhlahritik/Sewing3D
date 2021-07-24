@@ -47,8 +47,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
-const auto = false;
-const intervalTime = 5000;
+const auto = true;
+const intervalTime = 3000;
 let slideInterval;
 
 const nextSlide = () => {
@@ -89,6 +89,7 @@ next.addEventListener('click', e => {
     if (auto) {
         clearInterval(slideInterval);
         slideInterval = setInterval(nextSlide, intervalTime);
+        auto = false;
     }
 });
 
@@ -97,6 +98,7 @@ prev.addEventListener('click', e => {
     if (auto) {
         clearInterval(slideInterval);
         slideInterval = setInterval(nextSlide, intervalTime);
+        auto = false;
     }
 });
 
