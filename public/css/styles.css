@@ -401,6 +401,10 @@ nav a {
   background: url(../img/IL76/3.JPG) no-repeat center center/contain;
 }
 
+.slide:nth-child(12) {
+  background: url(../img/Sea/1.jpg) no-repeat center center/contain;
+}
+
 table {
   margin: auto;
   max-width: 80%;
